@@ -1,0 +1,19 @@
+<div id="<%= dom_id wine %>">
+  <p>
+    <strong>Name:</strong>
+    <%= wine.name %>
+  </p>
+
+  <p>
+    <strong>Score:</strong>
+    <%= wine.score %>
+  </p>
+
+  <p>
+    <strong>Strains:</strong>
+    <%= wine.strains.order(:name).map {|s| "#{s.name} (#{s.percentage})"}.join(',') %>
+  </p>
+  
+
+
+</div>
